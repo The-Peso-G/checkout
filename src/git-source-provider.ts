@@ -262,7 +262,7 @@ async function configureAuthToken(
   // Configure a placeholder value. This approach avoids the credential being captured
   // by process creation audit events, which are commonly logged. For more information,
   // refer to https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/manage/component-updates/command-line-process-auditing
-  const placeholder = `AUTHORIZATION: basic ***`
+  const placeholder = `AUTHORIZATION: basic ****`
   await git.config(authConfigKey, placeholder)
 
   // Determine the basic credential value
