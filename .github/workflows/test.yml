@@ -82,6 +82,8 @@ jobs:
       - name: Verify LFS
         shell: bash
         run: __test__/verify-lfs.sh
+      - run: |
+          cat basic/.git/config
 
   test-job-container:
     runs-on: ubuntu-latest
@@ -103,5 +105,3 @@ jobs:
           path: basic
       - name: Verify basic
         run: __test__/verify-basic.sh --archive
-      - run: |
-          cat basic/.git/config
