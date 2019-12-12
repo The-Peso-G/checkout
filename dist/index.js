@@ -5274,7 +5274,7 @@ function configureAuthToken(git, authToken) {
         // Configure a placeholder value. This approach avoids the credential being captured
         // by process creation audit events, which are commonly logged. For more information,
         // refer to https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/manage/component-updates/command-line-process-auditing
-        const placeholder = `AUTHORIZATION: basic ****`;
+        const placeholder = `AUTHORIZATION: basic ***`;
         yield git.config(authConfigKey, placeholder);
         // Determine the basic credential value
         const basicCredential = Buffer.from(`x-access-token:${authToken}`, 'utf8').toString('base64');
